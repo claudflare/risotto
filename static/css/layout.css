@@ -60,3 +60,23 @@
 .page__footer {
     grid-area: footer;
 }
+
+/* Aside */
+.aside__content:empty {
+    display: none;
+}
+
+.aside__categories-title {
+    margin-bottom: 0.25rem;
+}
+
+.aside__categories {
+    margin-top: 0.25rem;
+}
+
+/* Post images */
+.content__body img {
+    max-width: 80%;
+    display: block;
+    margin: 1rem auto;
+}

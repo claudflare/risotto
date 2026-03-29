@@ -46,13 +46,36 @@ h4:before { content: "#### "; }
 h5:before { content: "##### "; }
 h6:before { content: "###### "; }
 
-h1:before, 
-h2:before, 
-h3:before, 
-h4:before, 
-h5:before, 
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
 h6:before {
     color: var(--muted);
+}
+
+h1:before,
+h2:before,
+h3:before {
+    color: var(--link);
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
 }
 
 h1:first-child {
