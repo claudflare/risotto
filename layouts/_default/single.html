@@ -21,12 +21,11 @@
 
 {{define "aside" }}
     {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
-    {{ if or (.Params.author) (.Params.date) }}
-        <p>
-            {{ if .Params.author }}By {{ .Params.author }}{{ if .Date }}, {{ end }}{{ end }}
-            {{ if .Date }}{{ .Date.Format "2006-01-02" }}{{ end }}
-        </p>
-    {{ end }}
+    <p>
+        By {{ default .Site.Params.author .Params.author }}
+        {{ if .Date }} · {{ .Date.Format "02/01/2006" }}{{ end }}
+        · {{ .ReadingTime }} min read · {{ .WordCount }} words
+    </p>
 
     {{ if and (.Params.toc) (.TableOfContents) }}
 	    <hr>
