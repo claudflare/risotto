@@ -5,7 +5,18 @@
     <div class="content__body">
         {{ .Content }}
     </div>
-    <footer class="content__footer"></footer>
+    {{ $related := .Site.RegularPages.Related . | first 3 }}
+    {{ with $related }}
+    <footer class="content__footer">
+        <hr>
+        <p class="related__title">$ ls related/</p>
+        <ul class="related__list">
+            {{ range . }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </footer>
+    {{ end }}
 {{ end }}
 
 {{define "aside" }}

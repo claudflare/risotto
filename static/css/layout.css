@@ -61,6 +61,16 @@
     grid-area: footer;
 }
 
+/* Related posts */
+.related__title {
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+}
+
+.related__list {
+    margin-top: 0.25rem;
+}
+
 /* Aside */
 .aside__content:empty {
     display: none;
