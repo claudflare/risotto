@@ -182,9 +182,8 @@ pre {
 }
 
 /* Fix overflow when config markup.highlight.lineNos is true */
-/* See https://github.com/joeroe/risotto/issues/41 */
 .highlight div {
-	overflow-x: auto;
+    overflow-x: visible;
 }
 
 /* Emphasis */
