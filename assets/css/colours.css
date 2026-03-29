@@ -15,3 +15,8 @@
 	/* Logo */
 	--logo: var(--base0B);
 }
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+}
