@@ -165,25 +165,13 @@ blockquote::before {
     font-weight: 400;
 }
 
-/* Code */
-code,
-kbd,
-samp {
+/* Inline code */
+:not(pre) > code {
     background: var(--inner-bg);
     font-family: var(--font-monospace);
-    color: var(--off-fg);
-}
-
-pre {
-    font-family: var(--font-monospace);
-    overflow-x: auto;
-    padding: 1.5rem;
-    margin: 0 0 1.5rem 0;
-}
-
-/* Fix overflow when config markup.highlight.lineNos is true */
-.highlight div {
-    overflow-x: visible;
+    color: var(--base0C);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
 }
 
 /* Emphasis */
