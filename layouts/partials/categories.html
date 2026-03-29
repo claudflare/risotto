@@ -1,0 +1,9 @@
+{{ with .Site.Taxonomies.categories }}
+<p class="aside__categories-title">Categories</p>
+<ul class="aside__categories">
+    {{ range $name, $pages := . }}
+    {{ $termPage := $.Site.GetPage (printf "/categories/%s" $name) }}
+    <li><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/">{{ if $termPage }}{{ $termPage.Title }}{{ else }}{{ $name | title }}{{ end }}</a></li>
+    {{ end }}
+</ul>
+{{ end }}
