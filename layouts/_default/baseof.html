@@ -33,6 +33,8 @@
 
         </div>
         {{ with resources.Get "js/copy-code.js" | minify | fingerprint }}<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>{{ end }}
+        {{/* Lightbox: click images to view fullscreen. Disable with params.theme.lightbox = false in your hugo.toml */}}
+        {{ if ne .Site.Params.theme.lightbox false }}{{ with resources.Get "js/lightbox.js" | minify | fingerprint }}<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>{{ end }}{{ end }}
     </body>
 
 </html>
